@@ -309,7 +309,7 @@ const ItemDetailPanel = ({ item, curator, onAddToCart, onClose }) => {
             </button>
             
             {/* SP用: 下部の余白確保 (iPhoneのバー対策) */}
-            <div className="h-[calc(1rem+env(safe-area-inset-bottom))] md:hidden"></div>
+            <div className="h-4 md:hidden"></div>
           </div>
         </div>
       </div>
@@ -350,8 +350,8 @@ export default function App() {
   };
 
   return (
-    // SP: h-[100dvh]でアドレスバーの影響を受けない高さ設定 + セーフエリア対応
-    <div className="h-[100dvh] w-full bg-[#1a0505] text-[#fdfbf7] font-serif overflow-hidden flex flex-col md:flex-row selection:bg-yellow-900/50 selection:text-yellow-100 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
+    // SP: h-[100dvh]でアドレスバーの影響を受けない高さ設定
+    <div className="h-[100dvh] w-full bg-[#1a0505] text-[#fdfbf7] font-serif overflow-hidden flex flex-col md:flex-row selection:bg-yellow-900/50 selection:text-yellow-100">
       
       {/* サイドバー / ヘッダー */}
       <div className="z-40 w-full md:w-[400px] bg-[#2a0a0a] border-b md:border-b-0 md:border-r border-yellow-600/20 flex flex-col flex-shrink-0 relative shadow-2xl transition-all duration-300">
@@ -570,7 +570,7 @@ export default function App() {
       </div>
 
       {/* カートドロワー (SP: 全幅 / PC: 420px) */}
-      <div className={`fixed inset-y-0 right-0 w-full md:w-[420px] bg-[#2a0a0a] border-l border-yellow-600/20 transform transition-transform duration-700 z-[60] p-6 md:p-12 pt-[calc(1.5rem+env(safe-area-inset-top))] pb-[env(safe-area-inset-bottom)] shadow-2xl ${isCartOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed inset-y-0 right-0 w-full md:w-[420px] bg-[#2a0a0a] border-l border-yellow-600/20 transform transition-transform duration-700 z-[60] p-6 md:p-12 shadow-2xl ${isCartOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex justify-between items-center mb-8 md:mb-16 border-b border-yellow-600/20 pb-6">
           <h2 className="font-serif text-lg md:text-xl tracking-[0.3em] text-yellow-600">お買い物カゴ</h2>
           <button onClick={() => setIsCartOpen(false)} className="text-[#8c7a7a] hover:text-yellow-500 transition-colors"><X size={24} strokeWidth={0.5} /></button>
@@ -595,7 +595,7 @@ export default function App() {
         </div>
         
         {cart.length > 0 && (
-          <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 pb-[calc(1.5rem+env(safe-area-inset-bottom))] bg-[#2a0a0a] border-t border-yellow-600/20">
+          <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 bg-[#2a0a0a] border-t border-yellow-600/20">
             <div className="flex justify-between font-serif text-base md:text-lg mb-6 md:mb-10 text-[#fdfbf7]">
               <span className="tracking-widest text-xs md:text-sm text-[#a89f91]">合計金額</span>
               <span className="text-lg md:text-xl">¥{cart.reduce((sum, i) => sum + i.price, 0).toLocaleString()}</span>
