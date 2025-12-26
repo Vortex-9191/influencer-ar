@@ -5,133 +5,133 @@ import { ShoppingBag, X, Star, ArrowRight, Plus, Scan, Target, ChevronRight, Max
 
 const LOOKS = [
   {
-    id: 'modern_classic',
-    title: '都市の夜を彩る、光の機能美',
-    subTitle: 'URBAN ILLUMINATION',
+    id: 'classic_elegance',
+    title: '上質な日常を纏う、大人のエレガンス',
+    subTitle: 'TIMELESS CLASSIC',
     // ルック全体の提案者（この人が全アイテムをコメントする）
     curator: {
       name: "SAYAKA",
       role: "Fashion Director",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop",
-      shortTitle: "光と影を操る、ドラマティックな夜へ。"
+      shortTitle: "品格を纏う、洗練された日常へ。"
     },
-    modelImage: 'https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=80&w=1600&auto=format&fit=crop',
-    description: '伝統的な美意識と、最先端の技術が織りなす調和。都市の喧騒を優雅に泳ぐための、現代のドレスコード。',
+    modelImage: '/look1.png',
+    description: 'キャメルコートと白シャツが織りなす、時代を超えた美しさ。クラシックな空間に映える、洗練された大人のスタイル。',
     items: [
       {
         id: 'c_makeup_1',
-        name: 'プリズム・リップグロス',
+        name: 'ナチュラルグロウ・リップ',
         price: 4500,
         category: '化粧品',
-        feature: '偏光パール配合',
-        description: '角度によって表情を変える、オーロラのような輝きを唇に。',
-        x: 49, y: 56,
+        feature: '保湿成分配合',
+        description: '自然な血色感を与える、上品なローズカラー。',
+        x: 42, y: 35,
         zoomScale: 1.8,
-        comment: "夜のラウンジ照明の下で、この偏光パールが一番美しく輝きます。重ね塗りするほどに深みが出るので、パーティの必需品ですわ。"
+        comment: "ナチュラルメイクにぴったりの、肌馴染みの良いカラー。一塗りで上品な印象に仕上がります。"
       },
       {
         id: 'c_makeup_2',
-        name: 'ルミナス・アイライナー (Cyan)',
-        price: 3200,
-        category: '化粧品',
-        feature: '蓄光顔料使用',
-        description: '宵闇に浮かび上がる、鮮烈かつ上品なアイライン。',
-        x: 58, y: 35,
-        zoomScale: 1.8,
-        comment: "目尻に少し引くだけで、洗練されたフューチャリスティックな印象に。黒のドレスとのコントラストを楽しんでいただきたい一品。"
+        name: 'パールドロップ・イヤリング',
+        price: 12000,
+        category: '婦人雑貨',
+        feature: '淡水パール使用',
+        description: '揺れるたびに光を集める、クラシカルなイヤリング。',
+        x: 28, y: 28,
+        zoomScale: 2.0,
+        comment: "顔周りを華やかに見せてくれる、万能アクセサリー。どんなスタイルにも品格をプラスしてくれます。"
       },
       {
         id: 'c1',
-        name: 'スマート・バイザー V2',
-        price: 15000,
-        category: '婦人雑貨',
-        feature: 'ARディスプレイ',
-        description: '視界を拡張する、インテリジェントなアイウェア。',
-        x: 50, y: 22,
-        zoomScale: 1.5,
-        comment: "機能性だけでなく、ジュエリーのように顔周りを華やかに見せてくれるデザイン。通知を確認する所作さえも美しくなります。"
+        name: 'キャメル・チェスターコート',
+        price: 68000,
+        category: '婦人服',
+        feature: 'カシミヤ混紡',
+        description: '時代を超えて愛される、永遠の定番コート。',
+        x: 45, y: 58,
+        zoomScale: 1.4,
+        comment: "上質なカシミヤ混紡が生み出す、軽やかさと暖かさの両立。羽織るだけで全体の印象が格上げされます。"
       },
       {
         id: 'c2',
-        name: '高機能ボンバージャケット',
-        price: 42000,
+        name: 'シルク・ブラウス',
+        price: 32000,
         category: '婦人服',
-        feature: '完全防水・透湿',
-        description: '悪天候さえも味方につける、究極の機能美。',
-        x: 50, y: 75,
-        zoomScale: 1.3,
-        comment: "「守られている」という安心感と、ドレスのようなシルエットの両立。雨の日の外出が待ち遠しくなる、そんな一着です。"
+        feature: 'シルク100%',
+        description: '肌に吸い付くような滑らかさ、上質な白の輝き。',
+        x: 48, y: 45,
+        zoomScale: 1.5,
+        comment: "インナーとしても一枚でも決まる、万能ブラウス。光沢感が顔映りを良くしてくれます。"
       },
       {
         id: 'c3',
-        name: 'コンダクティブ・グローブ',
-        price: 8500,
+        name: 'レザー・スマホケース',
+        price: 15000,
         category: '婦人雑貨',
-        feature: 'タッチパネル対応',
-        description: '指先まで神経が行き届くような、極上のフィット感。',
-        x: 30, y: 85,
-        zoomScale: 1.5,
-        comment: "手袋を外さずにスマートに決済まで完了できる。このシームレスな体験こそが、現代のラグジュアリーだと感じます。"
+        feature: '本革仕様',
+        description: '手に馴染む上質なレザー、細部までこだわりを。',
+        x: 72, y: 42,
+        zoomScale: 1.6,
+        comment: "毎日手にするものだからこそ、上質なものを。使い込むほどに味わいが増すレザーです。"
       }
     ]
   },
   {
-    id: 'classic_mode',
-    title: '静寂を纏う、現代の忍び',
-    subTitle: 'MODERN NINJA STYLE',
+    id: 'luxe_feminine',
+    title: '品格を湛える、大人のフェミニン',
+    subTitle: 'LUXE FEMININE',
     // ルック全体の提案者
     curator: {
       name: "YUKI",
-      role: "Street Photographer",
+      role: "Style Editor",
       image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=150&auto=format&fit=crop",
-      shortTitle: "ノイズを消し去る、洗練のモノクローム。"
+      shortTitle: "華やぎと品格、その両立を。"
     },
-    modelImage: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1600&auto=format&fit=crop',
-    description: 'コンクリートジャングルを自在に駆け抜ける。機能性を追求した先に現れる、無駄のない美しさ。',
+    modelImage: '/look2.png',
+    description: 'ツイードジャケットとプリーツスカートが織りなす、クラシカルな華やぎ。ゴールドの空間に映える、洗練されたフェミニンスタイル。',
     items: [
       {
         id: 'u_makeup_1',
-        name: 'ベルベット・ルージュ (Brick)',
+        name: 'シアー・グロウリップ',
         price: 3800,
         category: '化粧品',
-        feature: 'ロングラスティング',
-        description: '意志の強さを表現する、深みのあるブリックレッド。',
-        x: 50, y: 12,
+        feature: 'ツヤ感処方',
+        description: '上品な輝きを与える、ナチュラルピンク。',
+        x: 50, y: 18,
         zoomScale: 2.0,
-        comment: "撮影中、マスクをしていても落ちにくい驚きの密着力。このブリックカラーは肌の透明感を一層引き立ててくれます。"
+        comment: "派手すぎず地味すぎない、絶妙なピンク。どんなシーンでも好印象を与えてくれます。"
       },
       {
         id: 'u1',
-        name: 'オーバーサイズ・フーディー',
-        price: 18000,
+        name: 'ツイード・ジャケット',
+        price: 58000,
         category: '婦人服',
-        feature: 'ヘビーオンスコットン',
-        description: '包み込まれるような安心感と、計算されたシルエット。',
-        x: 50, y: 32,
+        feature: 'フランス製生地',
+        description: '伝統と現代が融合した、永遠のエレガンス。',
+        x: 50, y: 35,
         zoomScale: 1.4,
-        comment: "フードの立ち上がりが美しく、横顔が凛として見えます。カジュアルなのにどこか品がある、絶妙なバランス感が気に入っています。"
+        comment: "肩のラインが美しく、着るだけで姿勢が良くなる気がします。ラメ糸が控えめに輝いて、華やかさをプラス。"
       },
       {
         id: 'u2',
-        name: 'テック・カーゴパンツ',
-        price: 24000,
+        name: 'プリーツ・ロングスカート',
+        price: 28000,
         category: '婦人服',
-        feature: '多機能ポケット',
-        description: '手ぶらで街へ。収納力とデザイン性を両立。',
-        x: 55, y: 62,
-        zoomScale: 1.4,
-        comment: "機材を持って移動するときも、バッグを持たずに歩ける解放感。シルエットが崩れないポケット配置にもこだわりを感じます。"
+        feature: 'ウエストゴム仕様',
+        description: '歩くたびに揺れる、優美なプリーツライン。',
+        x: 50, y: 70,
+        zoomScale: 1.3,
+        comment: "動くたびにプリーツが美しく揺れて、歩くのが楽しくなります。長時間座っても型崩れしにくいのが嬉しい。"
       },
       {
         id: 'u3',
-        name: 'エア・クッションスニーカー',
-        price: 32000,
-        category: '婦人靴',
-        feature: '衝撃吸収',
-        description: 'まるで無重力。歩くことの喜びを再定義する一足。',
-        x: 40, y: 88,
+        name: 'イントレチャート・バッグ',
+        price: 85000,
+        category: '婦人雑貨',
+        feature: 'ラムレザー編み込み',
+        description: '職人の技が光る、アイコニックなバッグ。',
+        x: 22, y: 75,
         zoomScale: 1.5,
-        comment: "一日中ロケで歩き回っても全く疲れません。機能性スニーカー特有の野暮ったさがなく、モードな服にも合うのが嬉しい。"
+        comment: "見た目以上の収納力と、使うほどに馴染む革の質感。一生もののバッグとしておすすめです。"
       }
     ]
   }
