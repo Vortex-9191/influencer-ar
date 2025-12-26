@@ -25,6 +25,7 @@ const LOOKS = [
         category: '化粧品',
         feature: '保湿成分配合',
         description: '自然な血色感を与える、上品なローズカラー。',
+        image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=400&auto=format&fit=crop',
         x: 42, y: 35,
         zoomScale: 1.8,
         comment: "ナチュラルメイクにぴったりの、肌馴染みの良いカラー。一塗りで上品な印象に仕上がります。"
@@ -36,6 +37,7 @@ const LOOKS = [
         category: '婦人雑貨',
         feature: '淡水パール使用',
         description: '揺れるたびに光を集める、クラシカルなイヤリング。',
+        image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=400&auto=format&fit=crop',
         x: 28, y: 28,
         zoomScale: 2.0,
         comment: "顔周りを華やかに見せてくれる、万能アクセサリー。どんなスタイルにも品格をプラスしてくれます。"
@@ -47,6 +49,7 @@ const LOOKS = [
         category: '婦人服',
         feature: 'カシミヤ混紡',
         description: '時代を超えて愛される、永遠の定番コート。',
+        image: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?q=80&w=400&auto=format&fit=crop',
         x: 45, y: 58,
         zoomScale: 1.4,
         comment: "上質なカシミヤ混紡が生み出す、軽やかさと暖かさの両立。羽織るだけで全体の印象が格上げされます。"
@@ -58,6 +61,7 @@ const LOOKS = [
         category: '婦人服',
         feature: 'シルク100%',
         description: '肌に吸い付くような滑らかさ、上質な白の輝き。',
+        image: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=400&auto=format&fit=crop',
         x: 48, y: 45,
         zoomScale: 1.5,
         comment: "インナーとしても一枚でも決まる、万能ブラウス。光沢感が顔映りを良くしてくれます。"
@@ -69,6 +73,7 @@ const LOOKS = [
         category: '婦人雑貨',
         feature: '本革仕様',
         description: '手に馴染む上質なレザー、細部までこだわりを。',
+        image: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?q=80&w=400&auto=format&fit=crop',
         x: 72, y: 42,
         zoomScale: 1.6,
         comment: "毎日手にするものだからこそ、上質なものを。使い込むほどに味わいが増すレザーです。"
@@ -96,6 +101,7 @@ const LOOKS = [
         category: '化粧品',
         feature: 'ツヤ感処方',
         description: '上品な輝きを与える、ナチュラルピンク。',
+        image: 'https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?q=80&w=400&auto=format&fit=crop',
         x: 50, y: 18,
         zoomScale: 2.0,
         comment: "派手すぎず地味すぎない、絶妙なピンク。どんなシーンでも好印象を与えてくれます。"
@@ -107,6 +113,7 @@ const LOOKS = [
         category: '婦人服',
         feature: 'フランス製生地',
         description: '伝統と現代が融合した、永遠のエレガンス。',
+        image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=400&auto=format&fit=crop',
         x: 50, y: 35,
         zoomScale: 1.4,
         comment: "肩のラインが美しく、着るだけで姿勢が良くなる気がします。ラメ糸が控えめに輝いて、華やかさをプラス。"
@@ -118,6 +125,7 @@ const LOOKS = [
         category: '婦人服',
         feature: 'ウエストゴム仕様',
         description: '歩くたびに揺れる、優美なプリーツライン。',
+        image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0uj40?q=80&w=400&auto=format&fit=crop',
         x: 50, y: 70,
         zoomScale: 1.3,
         comment: "動くたびにプリーツが美しく揺れて、歩くのが楽しくなります。長時間座っても型崩れしにくいのが嬉しい。"
@@ -129,6 +137,7 @@ const LOOKS = [
         category: '婦人雑貨',
         feature: 'ラムレザー編み込み',
         description: '職人の技が光る、アイコニックなバッグ。',
+        image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=400&auto=format&fit=crop',
         x: 22, y: 75,
         zoomScale: 1.5,
         comment: "見た目以上の収納力と、使うほどに馴染む革の質感。一生もののバッグとしておすすめです。"
@@ -223,9 +232,27 @@ const ItemDetailPanel = ({ item, curator, onAddToCart, onClose }) => {
 
           <div className="relative z-10">
             {/* SP用: ドラッグハンドルのような装飾 */}
-            <div className="w-12 h-1 bg-yellow-600/20 rounded-full mx-auto mb-6 md:hidden"></div>
+            <div className="w-12 h-1 bg-yellow-600/20 rounded-full mx-auto mb-4 md:hidden"></div>
 
-            <div className="flex justify-between items-start mb-6">
+            {/* 商品画像 */}
+            {item.image && (
+              <div className="mb-4 md:mb-6 relative">
+                <div className="aspect-square w-full max-w-[200px] md:max-w-[240px] mx-auto relative overflow-hidden border border-yellow-600/20 bg-[#1a0505]">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover filter brightness-[0.9] contrast-[1.05]"
+                  />
+                  {/* 角の装飾 */}
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-yellow-600/50"></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-yellow-600/50"></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-yellow-600/50"></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-yellow-600/50"></div>
+                </div>
+              </div>
+            )}
+
+            <div className="flex justify-between items-start mb-4">
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="w-8 h-[1px] bg-yellow-600"></span>
@@ -233,7 +260,7 @@ const ItemDetailPanel = ({ item, curator, onAddToCart, onClose }) => {
                     推奨品 No.{item.id.slice(-1)}
                   </span>
                 </div>
-                <h2 className="text-xl md:text-2xl font-serif text-[#fdfbf7] tracking-widest leading-relaxed mb-1">
+                <h2 className="text-lg md:text-xl font-serif text-[#fdfbf7] tracking-widest leading-relaxed mb-1">
                   {item.name}
                 </h2>
                 <div className="text-xs font-serif text-[#a89f91] tracking-[0.1em]">{item.category}</div>
@@ -243,7 +270,7 @@ const ItemDetailPanel = ({ item, curator, onAddToCart, onClose }) => {
               </button>
             </div>
 
-            <p className="text-[#dcd6ce] text-xs md:text-sm font-serif leading-7 md:leading-8 mb-6 tracking-wider text-justify border-l-2 border-yellow-900/50 pl-4">
+            <p className="text-[#dcd6ce] text-xs md:text-sm font-serif leading-6 md:leading-7 mb-4 tracking-wider text-justify border-l-2 border-yellow-900/50 pl-4">
               {item.description}
             </p>
 
