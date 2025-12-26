@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ShoppingBag, X, Star, ArrowRight, Plus, Scan, Target, ChevronRight, Maximize2, Share2, Zap, Sparkles, Diamond, PenTool, Quote } from 'lucide-react';
+import { ShoppingBag, X, Star, ArrowRight, Plus, Scan, Target, ChevronRight, Maximize2, Share2, Zap, Sparkles, Diamond, PenTool, Quote, Instagram, Users } from 'lucide-react';
 
 // --- データ定義 ---
 
@@ -11,7 +11,9 @@ const LOOKS = [
     // ルック全体の提案者（この人が全アイテムをコメントする）
     curator: {
       name: "SAYAKA",
+      username: "@sayaka_style",
       role: "Fashion Director",
+      followers: "125K",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop",
       shortTitle: "品格を纏う、洗練された日常へ。"
     },
@@ -87,7 +89,9 @@ const LOOKS = [
     // ルック全体の提案者
     curator: {
       name: "YUKI",
+      username: "@yuki_mode",
       role: "Style Editor",
+      followers: "89K",
       image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=150&auto=format&fit=crop",
       shortTitle: "華やぎと品格、その両立を。"
     },
@@ -425,23 +429,53 @@ export default function App() {
               </div>
             </div>
 
-            {/* キュレーター（インフルエンサー）情報表示エリア */}
+            {/* キュレーター（インフルエンサー）情報表示エリア - Instagram風 */}
             {currentLook.curator && (
-              <div className="flex items-center gap-4 mb-6 animate-fade-in-up delay-100">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-yellow-600/40 p-0.5 flex-shrink-0">
-                  <img 
-                    src={currentLook.curator.image} 
-                    alt={currentLook.curator.name} 
-                    className="w-full h-full rounded-full object-cover filter sepia-[0.3]"
-                  />
-                </div>
-                <div>
-                   <div className="flex items-center gap-2 mb-0.5">
-                     <span className="text-yellow-600 font-serif text-[9px] md:text-[10px] tracking-widest uppercase">{currentLook.curator.role}</span>
-                     <span className="w-8 h-[1px] bg-yellow-600/30"></span>
-                     <span className="text-[#dcd6ce] font-serif text-xs md:text-sm tracking-widest font-bold">{currentLook.curator.name}</span>
-                   </div>
-                   <p className="text-[#fdfbf7] font-serif italic text-xs md:text-sm tracking-wider">"{currentLook.curator.shortTitle}"</p>
+              <div className="mb-6 md:mb-8 animate-fade-in-up delay-100 bg-gradient-to-br from-[#3a1a1a]/60 to-[#2a0a0a]/80 border border-yellow-600/20 p-4 md:p-5 relative rounded-lg overflow-hidden">
+                {/* グラデーション装飾（Instagram風） */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500 opacity-60"></div>
+
+                <div className="flex items-center gap-4 md:gap-5">
+                  {/* プロフィール画像（Instagram風のグラデーションリング） */}
+                  <div className="relative flex-shrink-0">
+                    <div className="w-18 h-18 md:w-22 md:h-22 rounded-full p-[3px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                      <div className="w-full h-full rounded-full p-[2px] bg-[#2a0a0a]">
+                        <img
+                          src={currentLook.curator.image}
+                          alt={currentLook.curator.name}
+                          className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex-1 min-w-0">
+                    {/* 名前とユーザー名 */}
+                    <div className="mb-2">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-base md:text-lg text-[#fdfbf7] font-bold tracking-wide">{currentLook.curator.name}</span>
+                        <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                          <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                      </div>
+                      <span className="text-xs md:text-sm text-[#a89f91] font-medium">{currentLook.curator.username}</span>
+                    </div>
+
+                    {/* フォロワー数とロール */}
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="flex items-center gap-1.5">
+                        <Users size={12} className="text-yellow-600" />
+                        <span className="text-xs text-[#fdfbf7] font-semibold">{currentLook.curator.followers}</span>
+                        <span className="text-[10px] text-[#8c7a7a]">followers</span>
+                      </div>
+                      <span className="text-[10px] text-yellow-600/70 px-2 py-0.5 border border-yellow-600/30 rounded-full">{currentLook.curator.role}</span>
+                    </div>
+
+                    {/* キャッチコピー */}
+                    <p className="text-[#dcd6ce] text-[11px] md:text-xs leading-relaxed truncate">"{currentLook.curator.shortTitle}"</p>
+                  </div>
                 </div>
               </div>
             )}
