@@ -6,8 +6,7 @@ import { ShoppingBag, X, Star, ArrowRight, Plus, Scan, Target, ChevronRight, Max
 const LOOKS = [
   {
     id: 'classic_elegance',
-    title: '上質な日常を纏う、大人のエレガンス',
-    subTitle: 'TIMELESS CLASSIC',
+    caption: 'キャメルコートで作る、大人のクラシックスタイル',
     // ルック全体の提案者（この人が全アイテムをコメントする）
     curator: {
       name: "SAYAKA",
@@ -18,7 +17,6 @@ const LOOKS = [
       shortTitle: "品格を纏う、洗練された日常へ。"
     },
     modelImage: '/look1.png',
-    description: 'キャメルコートと白シャツが織りなす、時代を超えた美しさ。クラシックな空間に映える、洗練された大人のスタイル。',
     items: [
       {
         id: 'c_makeup_1',
@@ -84,8 +82,7 @@ const LOOKS = [
   },
   {
     id: 'luxe_feminine',
-    title: '品格を湛える、大人のフェミニン',
-    subTitle: 'LUXE FEMININE',
+    caption: 'ツイード×プリーツで魅せる、華やぎフェミニン',
     // ルック全体の提案者
     curator: {
       name: "YUKI",
@@ -96,7 +93,6 @@ const LOOKS = [
       shortTitle: "華やぎと品格、その両立を。"
     },
     modelImage: '/look2.png',
-    description: 'ツイードジャケットとプリーツスカートが織りなす、クラシカルな華やぎ。ゴールドの空間に映える、洗練されたフェミニンスタイル。',
     items: [
       {
         id: 'u_makeup_1',
@@ -480,14 +476,9 @@ export default function App() {
               </div>
             )}
 
-            <div>
-              <h2 className="text-[10px] md:text-xs text-[#a89f91] font-sans tracking-[0.2em] mb-2 md:mb-3">{currentLook.subTitle}</h2>
-              <h1 className="text-2xl md:text-3xl font-serif text-[#fdfbf7] tracking-wider leading-snug mb-3 md:mb-4">
-                {currentLook.title}
-              </h1>
-            </div>
-            <p className="text-[#dcd6ce] text-[10px] md:text-xs leading-loose font-serif tracking-wider text-justify line-clamp-3 md:line-clamp-none">
-              {currentLook.description}
+            {/* ルックのキャプション */}
+            <p className="text-[#fdfbf7] text-sm md:text-base font-serif leading-relaxed tracking-wide">
+              {currentLook.caption}
             </p>
           </div>
 
