@@ -18,59 +18,59 @@ const LOOKS = [
     modelImage: 'https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=80&w=1600&auto=format&fit=crop',
     description: '伝統的な美意識と、最先端の技術が織りなす調和。都市の喧騒を優雅に泳ぐための、現代のドレスコード。',
     items: [
-      { 
-        id: 'c_makeup_1', 
-        name: 'プリズム・リップグロス', 
-        price: 4500, 
-        category: '化粧品', 
+      {
+        id: 'c_makeup_1',
+        name: 'プリズム・リップグロス',
+        price: 4500,
+        category: '化粧品',
         feature: '偏光パール配合',
         description: '角度によって表情を変える、オーロラのような輝きを唇に。',
-        x: 49, y: 56, 
-        zoomScale: 3.5,
+        x: 49, y: 56,
+        zoomScale: 1.8,
         comment: "夜のラウンジ照明の下で、この偏光パールが一番美しく輝きます。重ね塗りするほどに深みが出るので、パーティの必需品ですわ。"
       },
-      { 
-        id: 'c_makeup_2', 
-        name: 'ルミナス・アイライナー (Cyan)', 
-        price: 3200, 
-        category: '化粧品', 
+      {
+        id: 'c_makeup_2',
+        name: 'ルミナス・アイライナー (Cyan)',
+        price: 3200,
+        category: '化粧品',
         feature: '蓄光顔料使用',
         description: '宵闇に浮かび上がる、鮮烈かつ上品なアイライン。',
-        x: 58, y: 35, 
-        zoomScale: 3.8,
+        x: 58, y: 35,
+        zoomScale: 1.8,
         comment: "目尻に少し引くだけで、洗練されたフューチャリスティックな印象に。黒のドレスとのコントラストを楽しんでいただきたい一品。"
       },
-      { 
-        id: 'c1', 
-        name: 'スマート・バイザー V2', 
-        price: 15000, 
-        category: '婦人雑貨', 
+      {
+        id: 'c1',
+        name: 'スマート・バイザー V2',
+        price: 15000,
+        category: '婦人雑貨',
         feature: 'ARディスプレイ',
         description: '視界を拡張する、インテリジェントなアイウェア。',
-        x: 50, y: 22, 
-        zoomScale: 2.5,
+        x: 50, y: 22,
+        zoomScale: 1.5,
         comment: "機能性だけでなく、ジュエリーのように顔周りを華やかに見せてくれるデザイン。通知を確認する所作さえも美しくなります。"
       },
-      { 
-        id: 'c2', 
-        name: '高機能ボンバージャケット', 
-        price: 42000, 
-        category: '婦人服', 
+      {
+        id: 'c2',
+        name: '高機能ボンバージャケット',
+        price: 42000,
+        category: '婦人服',
         feature: '完全防水・透湿',
         description: '悪天候さえも味方につける、究極の機能美。',
-        x: 50, y: 75, 
-        zoomScale: 1.8,
+        x: 50, y: 75,
+        zoomScale: 1.3,
         comment: "「守られている」という安心感と、ドレスのようなシルエットの両立。雨の日の外出が待ち遠しくなる、そんな一着です。"
       },
-      { 
-        id: 'c3', 
-        name: 'コンダクティブ・グローブ', 
-        price: 8500, 
-        category: '婦人雑貨', 
+      {
+        id: 'c3',
+        name: 'コンダクティブ・グローブ',
+        price: 8500,
+        category: '婦人雑貨',
         feature: 'タッチパネル対応',
         description: '指先まで神経が行き届くような、極上のフィット感。',
-        x: 30, y: 85, 
-        zoomScale: 2.2,
+        x: 30, y: 85,
+        zoomScale: 1.5,
         comment: "手袋を外さずにスマートに決済まで完了できる。このシームレスな体験こそが、現代のラグジュアリーだと感じます。"
       }
     ]
@@ -89,48 +89,48 @@ const LOOKS = [
     modelImage: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1600&auto=format&fit=crop',
     description: 'コンクリートジャングルを自在に駆け抜ける。機能性を追求した先に現れる、無駄のない美しさ。',
     items: [
-      { 
-        id: 'u_makeup_1', 
-        name: 'ベルベット・ルージュ (Brick)', 
-        price: 3800, 
-        category: '化粧品', 
+      {
+        id: 'u_makeup_1',
+        name: 'ベルベット・ルージュ (Brick)',
+        price: 3800,
+        category: '化粧品',
         feature: 'ロングラスティング',
         description: '意志の強さを表現する、深みのあるブリックレッド。',
-        x: 50, y: 12, 
-        zoomScale: 4.5,
+        x: 50, y: 12,
+        zoomScale: 2.0,
         comment: "撮影中、マスクをしていても落ちにくい驚きの密着力。このブリックカラーは肌の透明感を一層引き立ててくれます。"
       },
-      { 
-        id: 'u1', 
-        name: 'オーバーサイズ・フーディー', 
-        price: 18000, 
-        category: '婦人服', 
+      {
+        id: 'u1',
+        name: 'オーバーサイズ・フーディー',
+        price: 18000,
+        category: '婦人服',
         feature: 'ヘビーオンスコットン',
         description: '包み込まれるような安心感と、計算されたシルエット。',
-        x: 50, y: 32, 
-        zoomScale: 1.8,
+        x: 50, y: 32,
+        zoomScale: 1.4,
         comment: "フードの立ち上がりが美しく、横顔が凛として見えます。カジュアルなのにどこか品がある、絶妙なバランス感が気に入っています。"
       },
-      { 
-        id: 'u2', 
-        name: 'テック・カーゴパンツ', 
-        price: 24000, 
-        category: '婦人服', 
+      {
+        id: 'u2',
+        name: 'テック・カーゴパンツ',
+        price: 24000,
+        category: '婦人服',
         feature: '多機能ポケット',
         description: '手ぶらで街へ。収納力とデザイン性を両立。',
-        x: 55, y: 62, 
-        zoomScale: 1.8,
+        x: 55, y: 62,
+        zoomScale: 1.4,
         comment: "機材を持って移動するときも、バッグを持たずに歩ける解放感。シルエットが崩れないポケット配置にもこだわりを感じます。"
       },
-      { 
-        id: 'u3', 
-        name: 'エア・クッションスニーカー', 
-        price: 32000, 
-        category: '婦人靴', 
+      {
+        id: 'u3',
+        name: 'エア・クッションスニーカー',
+        price: 32000,
+        category: '婦人靴',
         feature: '衝撃吸収',
         description: 'まるで無重力。歩くことの喜びを再定義する一足。',
-        x: 40, y: 88, 
-        zoomScale: 2.5,
+        x: 40, y: 88,
+        zoomScale: 1.5,
         comment: "一日中ロケで歩き回っても全く疲れません。機能性スニーカー特有の野暮ったさがなく、モードな服にも合うのが嬉しい。"
       }
     ]
@@ -213,7 +213,7 @@ const ItemDetailPanel = ({ item, curator, onAddToCart, onClose }) => {
       <div className="bg-[#2c0b0e] border-t md:border border-yellow-600/30 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] md:shadow-2xl relative transition-all duration-700 p-1 rounded-t-2xl md:rounded-none">
         
         {/* 内枠（金色のライン） */}
-        <div className="border-t md:border border-yellow-600/20 p-6 md:p-8 h-full relative overflow-hidden rounded-t-xl md:rounded-none max-h-[80vh] overflow-y-auto">
+        <div className="border-t md:border border-yellow-600/20 p-4 md:p-8 h-full relative overflow-hidden rounded-t-xl md:rounded-none max-h-[55vh] md:max-h-[80vh] overflow-y-auto">
           
           {/* 背景のダマスク柄風テクスチャ */}
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
@@ -353,8 +353,8 @@ export default function App() {
     // SP: h-[100dvh]でアドレスバーの影響を受けない高さ設定 + セーフエリア対応
     <div className="h-[100dvh] w-full bg-[#1a0505] text-[#fdfbf7] font-serif overflow-hidden flex flex-col md:flex-row selection:bg-yellow-900/50 selection:text-yellow-100 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
       
-      {/* サイドバー / ヘッダー */}
-      <div className="z-40 w-full md:w-[400px] bg-[#2a0a0a] border-b md:border-b-0 md:border-r border-yellow-600/20 flex flex-col flex-shrink-0 relative shadow-2xl transition-all duration-300">
+      {/* サイドバー / ヘッダー (PC: 40% / SP: 全幅) */}
+      <div className="z-40 w-full md:w-[40%] md:max-w-[500px] bg-[#2a0a0a] border-b md:border-b-0 md:border-r border-yellow-600/20 flex flex-col flex-shrink-0 relative shadow-2xl transition-all duration-300">
         
         {/* 背景テクスチャ */}
         <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
